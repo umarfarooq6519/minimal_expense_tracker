@@ -24,6 +24,7 @@ class MainApp extends StatelessWidget {
       create: (context) => ExpenseData(),
       builder: (context, child) => MaterialApp(
         theme: ThemeData(
+          fontFamily: 'Satoshi',
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
           useMaterial3: true,
         ),

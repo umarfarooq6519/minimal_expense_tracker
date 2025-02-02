@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(17),
                   ),
                 ),
                 hintText: 'Title',
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.all(
-                    Radius.circular(20),
+                    Radius.circular(17),
                   ),
                 ),
                 prefixIcon: Icon(Icons.attach_money_rounded),
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
   FloatingActionButton _floatingButton() {
     return FloatingActionButton(
       backgroundColor: Colors.black87,
-      shape: const CircleBorder(),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17)),
       onPressed: showAddDialog,
       child: Icon(
         Icons.add,
