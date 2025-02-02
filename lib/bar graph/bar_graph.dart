@@ -1,4 +1,5 @@
 import 'package:expense_tracker/bar%20graph/bar_data.dart';
+import 'package:expense_tracker/utils/text.styles.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -85,11 +86,7 @@ class MyBarGraph extends StatelessWidget {
   }
 
   Widget getBottomTitles(double value, TitleMeta meta) {
-    const style = TextStyle(
-      color: Colors.grey,
-      fontWeight: FontWeight.bold,
-      fontSize: 14,
-    );
+    const style = TextStyles.dimText;
 
     Widget text;
 

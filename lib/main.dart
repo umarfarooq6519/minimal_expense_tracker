@@ -22,9 +22,13 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => ExpenseData(),
-      builder: (context, child) => const MaterialApp(
+      builder: (context, child) => MaterialApp(
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+          useMaterial3: true,
+        ),
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        home: const HomePage(),
       ),
     );
   }
