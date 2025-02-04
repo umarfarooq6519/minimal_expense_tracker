@@ -1,4 +1,4 @@
-import 'package:expense_tracker/bar%20graph/bar.dart';
+import 'package:expense_tracker/models/bar.model.dart';
 
 class BarData {
   final double sunAmount;

@@ -1,7 +1,8 @@
-import 'package:expense_tracker/bar%20graph/bar_data.dart';
+import 'package:flutter/material.dart';
+
+import 'package:expense_tracker/data/bar.data.dart';
 import 'package:expense_tracker/utils/text.styles.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/material.dart';
 
 class MyBarGraph extends StatelessWidget {
   final double? maxY;
@@ -69,15 +70,16 @@ class MyBarGraph extends StatelessWidget {
                   x: data.x,
                   barRods: [
                     BarChartRodData(
-                        toY: data.y,
-                        color: Colors.grey[800],
-                        width: 25,
-                        borderRadius: BorderRadius.circular(5),
-                        backDrawRodData: BackgroundBarChartRodData(
-                          show: true,
-                          color: Colors.grey[300],
-                          toY: maxY,
-                        )),
+                      toY: data.y,
+                      color: Colors.grey[800],
+                      width: 25,
+                      borderRadius: BorderRadius.circular(5),
+                      backDrawRodData: BackgroundBarChartRodData(
+                        show: true,
+                        color: Colors.grey[300],
+                        toY: maxY,
+                      ),
+                    ),
                   ],
                 ))
             .toList(),

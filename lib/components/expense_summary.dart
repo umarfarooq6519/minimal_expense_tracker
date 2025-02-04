@@ -1,9 +1,10 @@
-import 'package:expense_tracker/bar%20graph/bar_graph.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'package:expense_tracker/components/bar_graph.dart';
 import 'package:expense_tracker/data/expense.data.dart';
 import 'package:expense_tracker/helpers/datetime.helper.dart';
 import 'package:expense_tracker/utils/text.styles.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class ExpenseSummary extends StatelessWidget {
   final DateTime? startOfWeek;
@@ -77,6 +78,7 @@ class ExpenseSummary extends StatelessWidget {
     return Consumer<ExpenseData>(
       builder: (context, value, child) => Column(
         children: [
+          // ##### Week Total
           Padding(
             padding: const EdgeInsets.all(25.0),
             child: Row(
@@ -93,6 +95,8 @@ class ExpenseSummary extends StatelessWidget {
               ],
             ),
           ),
+
+          // ##### Chart Graph
           SizedBox(
             height: 200,
             child: MyBarGraph(
